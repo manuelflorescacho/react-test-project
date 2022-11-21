@@ -20,7 +20,7 @@ const QuestionsPage = () => {
     }
   )
   return (
-    <Form style={{textAlign:"left", left:0}} >
+    <Form style={{textAlign:"left", left:0}} data-testid="QuestionsPage">
       {(() => {
         let chks = [];
         mapList.forEach((value, key) => {

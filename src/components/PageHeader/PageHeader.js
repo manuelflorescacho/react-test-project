@@ -13,7 +13,7 @@ const PageHeader = (props) => {
     myContext.setIndexValue(index);
   }
   return (
-    <Navbar bg="light" expand={false}>
+    <Navbar bg="light" expand={false} data-testid="PageHeader">
       
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

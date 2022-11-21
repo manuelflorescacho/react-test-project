@@ -64,7 +64,7 @@ const PageCardHolder = (props) => {
   }
 
   return (
-    <Card className="border-0">
+    <Card className="border-0" data-testid="PageCardHolder">
       <Card.Body>
         <Row>
           <Col xs={1}>{leftSelector()}</Col>

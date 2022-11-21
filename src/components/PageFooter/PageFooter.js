@@ -6,7 +6,7 @@ import Pagination from 'react-bootstrap/Pagination';
 
 const PageFooter = (props) => {
   return (
-    <Row>
+    <Row data-testid="PageFooter">
         <Col></Col>
         <Col>
           <div>

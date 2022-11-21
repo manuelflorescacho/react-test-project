@@ -6,7 +6,7 @@ import AppContext from '../AppContext/AppContext';
 const CompletionPage = () => {
   const myContext = useContext(AppContext);
   return (
-    <div style={{textAlign: 'center'}}>
+    <div style={{textAlign: 'center'}} data-testid="CompletionPage">
       <Row>
         <Col>
           <h2>Name:</h2>

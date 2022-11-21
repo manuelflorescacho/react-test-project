@@ -16,7 +16,7 @@ const DatePage = () => {
     myContext.setYearValue(event.target.value);
   }
   return (
-    <Form>
+    <Form data-testid="DatePage">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Row>
           <Col><Form.Label>Month</Form.Label></Col>

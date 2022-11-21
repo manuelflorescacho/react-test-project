@@ -9,10 +9,12 @@ const IntroPage = () => {
   }
 
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form data-testid="IntroPage">
+      <Form.Group className="mb-3" >
         <h3><Form.Label>What is your name?</Form.Label></h3>
-        <Form.Control type="name" placeholder={myContext.name} onChange={updateGlobalText}/>
+        <Form.Control 
+          type="name" data-testid="NameInput"
+          placeholder={myContext.name} onChange={updateGlobalText}/>
       </Form.Group>
     </Form>
   );
