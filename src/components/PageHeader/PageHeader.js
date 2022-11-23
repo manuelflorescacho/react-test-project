@@ -14,7 +14,7 @@ const PageHeader = (props) => {
   const questionMarkStyle={background:"#000080", color:"white", fontWeight:"bold",borderRadius:"100%", padding:"12%",textAlign:"center"}
   const linkStyle = { textDecoration: 'none', color:'#808080',display: 'inline-block'};
   const containCenterImage = {display: "flex",justifyContent: "center", alignItems: "center"}
-  const navBarTextStyle = {height:"10%", width:"10%",textAlign:"right", display:"inline-block", width:"25%"}
+  const navBarTextStyle = {height:"10%", width:"10%",textAlign:"right", display:"inline-block", width:"15%"}
   let navBarObjectToggle = document.getElementById('navbarContentToggle');
   const setClickedLinkIndex = (index) => {
     myContext.setIndexValue(index);
