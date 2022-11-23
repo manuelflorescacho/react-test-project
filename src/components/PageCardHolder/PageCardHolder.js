@@ -74,7 +74,7 @@ const PageCardHolder = (props) => {
           </Col>
           <Col xs={1} style={selectorContainerStyle}>{rightSelector()}</Col>
         </Row>
-        <Row style={{justifyContent: 'center', height:"65%", padding:"10%", flexWrap:"nowrap"}}>
+        <Row style={{justifyContent: 'center', height:"65%", padding:"10%", flexWrap:"nowrap", overflow:"hidden"}}>
           <Col xs={10}>
             <Routes>
               {(() => {

@@ -5,26 +5,28 @@ import AppContext from '../AppContext/AppContext';
 
 const CompletionPage = () => {
   const myContext = useContext(AppContext);
+  const keyStyle = { fontWeight:"900", fontSize:"100%"}
+  const valueStyle = { fontWeight:"600", fontSize:"90%"}
+
   return (
     <div style={{textAlign: 'center'}} data-testid="CompletionPage">
       <Row>
         <Col>
-          <h2>Name:</h2>
-          <h3>{myContext.name}</h3></Col>
+          <span style={keyStyle}>Name: </span><span style={valueStyle}>{myContext.name}</span></Col>
       </Row>
       <Row>
         <Col>
-          <h2>Date:</h2>
-          <h3>{myContext.month} / {myContext.day} / {myContext.year}</h3>
+          <span style={keyStyle}>Date: </span><span style={valueStyle}>{myContext.month} / {myContext.day} / {myContext.year}</span>
         </Col>
       </Row>
       <Row>
         <Col>
-          <h2>Selected:</h2>
+          <span style={keyStyle}>Selected:</span>
+          <br></br>
           {(() => {
             let opts = []
             myContext.options.forEach(
-              key => opts.push(<h3 key={key}> {key.replace(/([A-Z])/g, ' $1').trim()}</h3>)
+              key => opts.push(<span key={key} style={valueStyle}> {key.replace(/([A-Z])/g, ' $1').trim()}</span>)
             )
             return opts;
           })()}

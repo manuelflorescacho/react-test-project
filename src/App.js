@@ -19,6 +19,7 @@ import AppContext from './components/AppContext/AppContext';
 
 function App() {
 
+  const stickyFooterStyle = {height:"10%", minHeight:"10%"};
   const routeComponents = [
     {index:0, path:"/", name:"IntroPage", component: <IntroPage/>},
     {index:1, path:"/QuestionsPage", name:"QuestionsPage", component: <QuestionsPage/>},
@@ -63,7 +64,7 @@ function App() {
             style={{height:"65%", minHeight:"65%"}}>
             <PageCardHolder components={routeComponents} index={userInformation.index}/>
           </Container>
-          <Container style={{height:"10%", minHeight:"10%"}}>
+          <Container style ={stickyFooterStyle}>
             <PageFooter components={routeComponents} pageCount={userInformation.indexMax} index={userInformation.index}/>
           </Container>
         </Router>
