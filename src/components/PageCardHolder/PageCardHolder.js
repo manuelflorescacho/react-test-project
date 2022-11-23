@@ -11,24 +11,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const PageCardHolder = (props) => {
   const myContext = useContext(AppContext);
   let navigate = useNavigate();
-  const imageContainer = {
-    display: "flex",
-    border:"solid",
-    width: '100%', height: '100%',
-    flexDirection: "vertical",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center"
-  }
+  const hrStyle = { alignSelf: "center", background: "black",width: "90%", height: "1px"}
+  const profileContainerStyle = {width: "45%", padding: "10px", textAlign: "center"}
   const myLogoStyle = { resizeMode: "contain",alignItems: "center",width: '100%', height: '100%' };
+  const selectorContainerStyle={display: "flex", alignItems: "center", paddingLeft:"0px", paddingRight:"0px"};
   const inComponents = props.components;
-  const buttonStyles = {
-    height: '100%',
-    width:'100%',
-    color:'#B8B8B8',
-    background:"#F8F8F8",
-    border:"none"
-  }
+  const buttonStyles = {color:'#B8B8B8', background:"#778899", border:"none", borderRadius:"50%"}
   function navigateToRoute () {
     navigate(inComponents[myContext.index].path);
   }
@@ -66,16 +54,24 @@ const PageCardHolder = (props) => {
   return (
     <Card className="border-0" data-testid="PageCardHolder">
       <Card.Body>
-        <Row>
-          <Col xs={1}>{leftSelector()}</Col>
+        <Row style={{marginRight:"0px",marginLeft:"0px"}}>
+          <Col xs={1} style={selectorContainerStyle}>{leftSelector()}</Col>
           <Col>
-            <Row style={{justifyContent: 'center'}}>
-              <Col xs={4} style={{justifyContent: 'center'}}>
-                <img src={svgProfile} style={myLogoStyle} />
+            <Row >
+              <Col xs={4} style={{width:"100%"}}>
+                <div style={{display:"flex"}}>
+                  <hr style={hrStyle} />
+                    <div style={profileContainerStyle}>
+                      <div>
+                        <img src={svgProfile} style={myLogoStyle} />
+                      </div>
+                    </div>
+                  <hr style={hrStyle} />
+                </div>
               </Col>
             </Row>
           </Col>
-          <Col xs={1}>{rightSelector()}</Col>
+          <Col xs={1} style={selectorContainerStyle}>{rightSelector()}</Col>
         </Row>
         <Row style={{justifyContent: 'center'}}>
           <Col xs={4}>

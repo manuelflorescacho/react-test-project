@@ -11,6 +11,7 @@ const PageHeader = (props) => {
   const inComponents = props.components;
   const myLogoStyle = { resizeMode: "contain",alignItems: "center",width: '100%'};
   const questionStyle = {borderRadius:"15px", textAlign:"center"};
+  const questionMarkStyle={background:"#000080", color:"white", fontWeight:"bold",borderRadius:"100%", padding:"12%",textAlign:"center"}
   const linkStyle = { textDecoration: 'none', color:'#808080',display: 'inline-block'};
   const containCenterImage = {display: "flex",justifyContent: "center", alignItems: "center"}
   let navBarObjectToggle = document.getElementById('navbarContentToggle');
@@ -43,7 +44,7 @@ const PageHeader = (props) => {
   return (
     <Navbar justify expand={false}>
       <Nav bg="light" data-testid="PageHeader" style={{display:"contents"}}>
-      <Navbar.Toggle id="navbarContentToggle" style={{ display:"inline-block", width:"25%"}}/>
+      <Navbar.Toggle id="navbarContentToggle" style={{ display:"inline-block"}}/>
       <Navbar.Collapse id="navbarContent">
         <Nav className="text-center" defaultActiveKey="/" >
           {(() => {
@@ -71,7 +72,7 @@ const PageHeader = (props) => {
       </Nav>
       <Navbar.Text style={{height:"10%", width:"10%",textAlign:"center", display:"inline-block", width:"25%"}}>
         <div style={questionStyle}>
-          <span style={{background:"indigo", color:"white", fontWeight:"bold",borderRadius:"100%", padding:"5%",textAlign:"center"}}>?</span>
+          <span style={questionMarkStyle}>?</span>
         </div>
       </Navbar.Text>
       </Nav>

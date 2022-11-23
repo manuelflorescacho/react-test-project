@@ -59,15 +59,7 @@ function App() {
           <PageHeader components={routeComponents}/>
         </Container>
         <Container className='containerHeight'>
-          <Row>
-            <Col>
-            </Col>
-            <Col xs={12}>
-              <PageCardHolder components={routeComponents} index={userInformation.index} />
-            </Col>
-            <Col>
-            </Col>
-          </Row>
+          <PageCardHolder components={routeComponents} index={userInformation.index} />
         </Container>
         <Container>
           <PageFooter components={routeComponents} pageCount={userInformation.indexMax} index={userInformation.index}/>
