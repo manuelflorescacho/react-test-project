@@ -7,7 +7,6 @@ import Pagination from 'react-bootstrap/Pagination';
 const PageFooter = (props) => {
   return (
     <Row data-testid="PageFooter">
-        <Col></Col>
         <Col>
           <div>
             <Pagination className={styles.PageFooter} >
@@ -15,9 +14,9 @@ const PageFooter = (props) => {
                 let items = [];
                 for (let i = 0; i < props.pageCount; i++) {
                   if (i === props.index) {
-                    items.push(<Pagination.Item key={i}> <h1 >.</h1></Pagination.Item>);
+                    items.push(<Pagination.Item key={i}> <h1 style={{fontWeight:900,color:"black"}}>.</h1></Pagination.Item>);
                   } else {
-                    items.push(<Pagination.Item key={i} disabled ><h3>.</h3></Pagination.Item>);
+                    items.push(<Pagination.Item key={i} disabled ><h1>.</h1></Pagination.Item>);
                   }
                 }
                 return items;
@@ -25,7 +24,6 @@ const PageFooter = (props) => {
             </Pagination>
           </div>
         </Col>
-        <Col></Col>
     </Row>
         
   );
