@@ -1,0 +1,11 @@
+/* const hrStyle = { alignSelf: "center", background: "black",width: "90%", height: "1px"} */
+.hrStyle{
+    align-self: "center"; 
+    background: "black";
+    width: "90%";
+    height: "1px";
+}
+/* const profileContainerStyle = {width: "45%", padding: "10px", textAlign: "center"} */
+/* const myLogoStyle = { resizeMode: "contain",alignItems: "center",width: '100%', height: '100%' }; */
+/* const selectorContainerStyle={display: "flex", alignItems: "center", paddingLeft:"0px", paddingRight:"0px"}; */
+/* const buttonStyles = {color:'#B8B8B8', background:"#778899", border:"none", borderRadius:"50%"} */

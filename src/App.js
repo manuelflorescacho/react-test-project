@@ -56,10 +56,10 @@ function App() {
     <div style={{height:"100%"}}>
       <AppContext.Provider value={userInformation}>
         <Router>
-          <Container className='containerHeight' style={{height:"20%", minHeight:"20%"}}>
+          <Container className='containerHeight' style={{height:"25%", minHeight:"25%"}}>
             <PageHeader components={routeComponents}/>
           </Container>
-          <Container className='containerHeight' style={{height:"70%", minHeight:"70%"}}>
+          <Container className='containerHeight' style={{height:"65%", minHeight:"65%"}}>
             <PageCardHolder components={routeComponents} index={userInformation.index}/>
           </Container>
           <Container style={{height:"10%", minHeight:"10%"}}>

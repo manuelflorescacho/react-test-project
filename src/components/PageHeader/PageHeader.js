@@ -43,7 +43,7 @@ const PageHeader = (props) => {
   }, []);
 
   return (
-    <Navbar justify expand={false}>
+    <Navbar justify expand={false} style={{height:"100%"}}>
       <Nav bg="light" data-testid="PageHeader" style={{display:"contents"}}>
       <Navbar.Toggle id="navbarContentToggle" style={{ display:"inline-block"}}/>
       <Navbar.Collapse id="navbarContent">
@@ -62,7 +62,7 @@ const PageHeader = (props) => {
           })()}
         </Nav>
       </Navbar.Collapse>
-      <Nav style={{width:"25%", display:"inline-block", width:"25%"}}>
+      <Nav style={{width:"35%", display:"inline-block"}}>
         <Navbar.Brand>
             <Link to={inComponents[0].path} id={inComponents[0].name} key = {inComponents[0].index}
               onClick={ event =>  setClickedLinkIndex(inComponents[0].index)}

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react'
+import * as styles from './PageCardHolder.module.css'
 import svgProfile from '../../assets/profile.svg';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -11,8 +12,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const PageCardHolder = (props) => {
   const myContext = useContext(AppContext);
   let navigate = useNavigate();
-  const hrStyle = { alignSelf: "center", background: "black",width: "90%", height: "1px"}
-  const profileContainerStyle = {width: "45%", padding: "10px", textAlign: "center"}
+  const hrStyle = { alignSelf: "center", background: "black",width: "70%", height: "1px"}
+  const profileContainerStyle = {width: "100%", padding: "10px", textAlign: "center"}
   const myLogoStyle = { resizeMode: "contain",alignItems: "center",width: '100%', height: '100%' };
   const selectorContainerStyle={display: "flex", alignItems: "center", paddingLeft:"0px", paddingRight:"0px"};
   const inComponents = props.components;
@@ -52,17 +53,17 @@ const PageCardHolder = (props) => {
   }
 
   return (
-    <Card className="border-0" data-testid="PageCardHolder">
+    <Card className="border-0" data-testid="PageCardHolder" style={{height:"100%"}}>
       <Card.Body>
-        <Row style={{marginRight:"0px",marginLeft:"0px"}}>
+        <Row style={{marginRight:"0px",marginLeft:"0px", height:"35%"}}>
           <Col xs={1} style={selectorContainerStyle}>{leftSelector()}</Col>
           <Col>
-            <Row >
+            <Row style={{height:"100%"}}>
               <Col xs={4} style={{width:"100%"}}>
-                <div style={{display:"flex"}}>
+                <div style={{display:"flex", height:"100%"}}>
                   <hr style={hrStyle} />
                     <div style={profileContainerStyle}>
-                      <div>
+                      <div style={{height:"100%"}}>
                         <img src={svgProfile} style={myLogoStyle} />
                       </div>
                     </div>
@@ -73,8 +74,8 @@ const PageCardHolder = (props) => {
           </Col>
           <Col xs={1} style={selectorContainerStyle}>{rightSelector()}</Col>
         </Row>
-        <Row style={{justifyContent: 'center'}}>
-          <Col xs={12}>
+        <Row style={{justifyContent: 'center', height:"65%"}}>
+          <Col xs={10}>
             <Routes>
               {(() => {
                 let routes = []

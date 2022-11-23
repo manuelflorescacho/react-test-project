@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { FormCheck } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import AppContext from '../AppContext/AppContext';
 
@@ -20,19 +21,22 @@ const QuestionsPage = () => {
     }
   )
   return (
-    <Form style={{textAlign:"left", left:0}} data-testid="QuestionsPage">
+    <Form style={{textAlign:"center", left:0}} data-testid="QuestionsPage">
       {(() => {
         let chks = [];
         mapList.forEach((value, key) => {
           chks.push(
-            <Form.Check 
-              type="checkbox"
-              key={key}
-              id={key}
-              label={key.replace(/([A-Z])/g, ' $1').trim()}
-              onChange={checkSelected}
-              defaultChecked={value}
-            />
+            <FormCheck  key={key} id={key} onChange={checkSelected} defaultChecked={value}>
+              <FormCheck.Label>{key.replace(/([A-Z])/g, ' $1').trim()}
+                <FormCheck.Input type="checkbox" />
+              </FormCheck.Label>
+            </FormCheck >
+            // <Form.Check 
+            //   type="checkbox" key={key} id={key}
+            //   label={key.replace(/([A-Z])/g, ' $1').trim()}
+            //   onChange={checkSelected} defaultChecked={value}
+            //   style={{float:"none"}}
+            // />
           )
         })
         return chks;

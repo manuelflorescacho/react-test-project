@@ -9,6 +9,34 @@ html, body, #root {
   height: 100%;
 }
 
+input[type=checkbox], .form-check-input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom checkbox appearance */
+  /* display: inline-block; */
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 5%;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 1.5px solid #bbbbbb;
+  border-radius: 0px;
+  background-color: #e7e6e7;
+  border-color:#084298;
+  margin:revert;
+}
+
+.form-check-input:checked, .form-check-input:checked[type=checkbox],
+.form-check-input:checked:after,  .form-check-input:checked[type=checkbox]:after{
+  /* Heres your symbol replacement - this is a tick in Unicode. */
+  content: "";
+  color: #fff;
+  border-color:#084298;
+  background-color:#084298;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
