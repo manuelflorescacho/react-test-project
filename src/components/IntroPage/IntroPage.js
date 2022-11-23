@@ -10,7 +10,7 @@ const IntroPage = () => {
 
   return (
     <Form data-testid="IntroPage">
-      <Form.Group className="mb-3" >
+      <Form.Group className="mb-3" style={{textAlign:"center"}}>
         <h3><Form.Label>What is your name?</Form.Label></h3>
         <Form.Control 
           type="name" data-testid="NameInput"

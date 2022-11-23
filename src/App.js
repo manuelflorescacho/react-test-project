@@ -53,19 +53,22 @@ function App() {
   }
 
   return (
-    <AppContext.Provider value={userInformation}>
-      <Router>
-        <Container className='containerHeight'>
-          <PageHeader components={routeComponents}/>
-        </Container>
-        <Container className='containerHeight'>
-          <PageCardHolder components={routeComponents} index={userInformation.index} />
-        </Container>
-        <Container>
-          <PageFooter components={routeComponents} pageCount={userInformation.indexMax} index={userInformation.index}/>
-        </Container>
-      </Router>
-    </AppContext.Provider>
+    <div style={{height:"100%"}}>
+      <AppContext.Provider value={userInformation}>
+        <Router>
+          <Container className='containerHeight' style={{height:"20%", minHeight:"20%"}}>
+            <PageHeader components={routeComponents}/>
+          </Container>
+          <Container className='containerHeight' style={{height:"70%", minHeight:"70%"}}>
+            <PageCardHolder components={routeComponents} index={userInformation.index}/>
+          </Container>
+          <Container style={{height:"10%", minHeight:"10%"}}>
+            <PageFooter components={routeComponents} pageCount={userInformation.indexMax} index={userInformation.index}/>
+          </Container>
+        </Router>
+      </AppContext.Provider>
+
+    </div>
   );
 }
 

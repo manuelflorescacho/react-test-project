@@ -74,7 +74,7 @@ const PageCardHolder = (props) => {
           <Col xs={1} style={selectorContainerStyle}>{rightSelector()}</Col>
         </Row>
         <Row style={{justifyContent: 'center'}}>
-          <Col xs={4}>
+          <Col xs={12}>
             <Routes>
               {(() => {
                 let routes = []

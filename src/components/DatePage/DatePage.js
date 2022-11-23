@@ -18,7 +18,7 @@ const DatePage = () => {
   return (
     <Form data-testid="DatePage">
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Row>
+        <Row style={{textAlign:"center"}}>
           <Col><Form.Label>Month</Form.Label></Col>
           <Col><Form.Label>Day</Form.Label></Col>
           <Col><Form.Label>Year</Form.Label></Col>
