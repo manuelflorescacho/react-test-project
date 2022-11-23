@@ -10,11 +10,11 @@ const PageHeader = (props) => {
   const myContext = useContext(AppContext);
   const inComponents = props.components;
   const myLogoStyle = { resizeMode: "contain",alignItems: "center",width: '100%'};
-  const questionStyle = {borderRadius:"15px", textAlign:"center"};
-  const questionMarkStyle={background:"#000080", color:"white", fontWeight:"bold",borderRadius:"100%", padding:"12%",textAlign:"center"}
+  const questionStyle = {borderRadius:"15px", textAlign:"center", width:"5%"};
+  const questionMarkStyle={background:"#000080", color:"white", fontWeight:"bold",borderRadius:"100%", padding:"20%",textAlign:"center"}
   const linkStyle = { textDecoration: 'none', color:'#808080',display: 'inline-block'};
   const containCenterImage = {display: "flex",justifyContent: "center", alignItems: "center"}
-  const navBarTextStyle = {height:"10%", width:"10%",textAlign:"right", display:"inline-block", width:"15%"}
+  const navBarTextStyle = {height:"100%", width:"10%",textAlign:"right", display:"contents", width:"15%"}
   let navBarObjectToggle = document.getElementById('navbarContentToggle');
   const setClickedLinkIndex = (index) => {
     myContext.setIndexValue(index);
@@ -62,7 +62,7 @@ const PageHeader = (props) => {
           })()}
         </Nav>
       </Navbar.Collapse>
-      <Nav style={{width:"35%", display:"inline-block"}}>
+      <Nav style={{width:"30%", display:"inline-block"}}>
         <Navbar.Brand>
             <Link to={inComponents[0].path} id={inComponents[0].name} key = {inComponents[0].index}
               onClick={ event =>  setClickedLinkIndex(inComponents[0].index)}

@@ -55,10 +55,10 @@ const PageCardHolder = (props) => {
   return (
     <Card className="border-0" data-testid="PageCardHolder" style={{height:"100%"}}>
       <Card.Body>
-        <Row style={{marginRight:"0px",marginLeft:"0px", height:"35%"}}>
+        <Row style={{marginRight:"0px",marginLeft:"0px", height:"35%", flexWrap:"nowrap"}}>
           <Col xs={1} style={selectorContainerStyle}>{leftSelector()}</Col>
           <Col>
-            <Row style={{height:"100%"}}>
+            <Row style={{height:"100%", flexWrap:"nowrap"}}>
               <Col xs={4} style={{width:"100%"}}>
                 <div style={{display:"flex", height:"100%"}}>
                   <hr style={hrStyle} />
@@ -74,7 +74,7 @@ const PageCardHolder = (props) => {
           </Col>
           <Col xs={1} style={selectorContainerStyle}>{rightSelector()}</Col>
         </Row>
-        <Row style={{justifyContent: 'center', height:"65%"}}>
+        <Row style={{justifyContent: 'center', height:"65%", padding:"10%", flexWrap:"nowrap"}}>
           <Col xs={10}>
             <Routes>
               {(() => {

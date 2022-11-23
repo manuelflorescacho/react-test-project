@@ -26,9 +26,9 @@ const QuestionsPage = () => {
         let chks = [];
         mapList.forEach((value, key) => {
           chks.push(
-            <FormCheck  key={key} id={key} onChange={checkSelected} defaultChecked={value}>
+            <FormCheck  key={key} id={key}>
               <FormCheck.Label>{key.replace(/([A-Z])/g, ' $1').trim()}
-                <FormCheck.Input type="checkbox" />
+                <FormCheck.Input type="checkbox" onChange={checkSelected} defaultChecked={value}/>
               </FormCheck.Label>
             </FormCheck >
             // <Form.Check 
